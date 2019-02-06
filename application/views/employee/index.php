@@ -1,13 +1,18 @@
-<?php $this->load->view('fragments/top'); ?>
+<?php 
+    $this->load->view('fragments/top'); 
+    $this->load->view('fragments/right'); 
+?>
 
 <div class="card">
-	<div class="card-header">
+	<div class="card-header w3-top w3-white">
 	  <i class="fas fa-database"></i>&nbsp;
 	   <?= $viewBag['title']; ?>
+	   <br>
+		<a class="w3-button btn-primary" href="<?= site_url('employee/add' ); ?>"><i class="fas fa-plus-square"> Add New Record</i></a>
+		
 	</div>
-	<a class="btn btn-primary" href="<?= site_url('/logout' ); ?>">Logout</a>
-	<a class="btn btn-primary" href="<?= site_url('employee/add' ); ?>">Add new Record</a>
-	<div class="card-body">
+
+	<div class="card-body w3-padding-64">
 		
 		<!-- data table -->
 					<?php $this->load->view($viewBag['viewPath'] . '/_table'); ?>
@@ -20,10 +25,10 @@
 	<div class="col-sm-12">&nbsp;</div>
 </div>
 
-<div class="card">
-	<div class="card-header">
-	  <i class="fas fa-database"></i>&nbsp;
-	  
-	</div>
 
 </div>
+ 
+<?php 
+    $this->load->view('fragments/bottom'); 
+?>
+

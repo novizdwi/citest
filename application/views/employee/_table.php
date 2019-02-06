@@ -1,5 +1,6 @@
-<div class="table-responsive">
-  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+
+<div class="table-responsive ">
+  <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
     <thead>
       <tr>
         <th>No</th>
@@ -26,8 +27,8 @@
             <td><?= $Model->hire_date; ?></td>
             <td class="text-center">
             <form action="<?= base_url('employee/delete/'. $Model->emp_no); ?>" method="post">
-              <a class="btn btn-primary" href="<?= base_url('employee' . '/edit/' . $Model->emp_no); ?>">edit</a>
-              <button type="submit" class="btn btn-primary">delete</button>
+              <a class="btn btn-primary" href="<?= base_url('employee' . '/edit/' . $Model->emp_no); ?>"data-toggle="tooltip" data-placement="bottom" title="Edit Record"><i class="fas fa-edit"></i></a>
+              <button type="submit" class="btn btn-primary" data-toggle="tooltip" data-placement="bottom" title="Delete Record"><i class="fas fa-trash"></i></button>
               </form>
             </td>
           </tr>
@@ -36,3 +37,4 @@
     </tbody>
   </table>
 </div>
+

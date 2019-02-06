@@ -61,3 +61,5 @@ $route['employee/delete/(:any)'] = 'Employees/delete/$1';
 
 $route['ceklogin'] = 'Logins/ceklogin';
 $route['logout'] = 'Logins/ceklogout';
+
+$route['dashboard'] = 'Dashboards';
